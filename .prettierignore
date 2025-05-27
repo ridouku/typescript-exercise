@@ -1,0 +1,13 @@
+*.yml
+dist
+logs
+node_modules\
+.next
+public/mockServiceWorker.js
+coverage
+.coverage
+out
+pnpm-lock.yaml
+.github
+build
+*.lock

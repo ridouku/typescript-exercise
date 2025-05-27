@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext", "webworker"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,10 +18,35 @@
         "name": "next"
       }
     ],
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./*"]
+      "#/pages/*": ["src/pages/*"],
+      "#/public/*": ["public/*"],
+      "#/components/*": ["src/components/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": [
+  ".next",
+  "coverage",
+  "node_modules",
+  "public",
+  "build"
+],
+  "include": [
+    "@types/*.ts",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    ".next/types/**/*.ts",
+    "**/*.config.ts",
+    ".eslintrc.js",
+    "build/types/**/*.ts"
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "esnext",
+      "moduleResolution": "node"
+    }
+  }
 }
