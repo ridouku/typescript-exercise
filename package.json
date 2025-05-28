@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint . --cache --ext js,ts,tsx",
     "lint:fix": "eslint . --fix --cache --ext js,ts,tsx",
-    "format": "prettier --config .prettierrc.yaml \"**/*.{js,jsx,ts,tsx,md}\" --write"
+    "format": "prettier --config .prettierrc.yaml \"**/*.{js,jsx,ts,tsx,md}\" --write",
+    "test": "jest --runInBand"
   },
   "dependencies": {
     "next": "15.3.2",

@@ -9,6 +9,7 @@ export default defineConfig([
   globalIgnores([
     "node_modules/*",
     ".next/*",
+    ".coverage/*",
   ]),
   {
     files: ["**/*.ts", "**/*.tsx"],
